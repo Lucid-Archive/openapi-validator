@@ -1,4 +1,4 @@
-FROM jamescooke/openapi-validator:v0.17.1
+FROM jamescooke/openapi-validator:v0.18.0
 
 COPY config.json /config/
 
