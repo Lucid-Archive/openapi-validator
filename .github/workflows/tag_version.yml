@@ -4,9 +4,6 @@ name: Create tag version
 # validator that it wraps. Therefore the version can be sniffed from the
 # dockerfile and used to create a tag when master is pushed.
 
-# NOTE: this will fail when a tag already exists, but nothing bad happens as a
-# side effect. However, master can end up with an annoying red x.
-
 on:
   push:
     branches: 
@@ -23,7 +20,7 @@ jobs:
       with:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         source_file: "Dockerfile"
-        extraction_regex: "v(\\d+\\.\\d+\\.\\d+)"
+        extraction_regex: "^FROM .*:v(\\d+\\.\\d+\\.\\d+)"
         tag_format: "v{version}"
 
     - name: Show found version and created tag
