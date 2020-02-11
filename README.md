@@ -1,4 +1,4 @@
-# openapi-validator
+# lucid-openapi-validator
 
 Docker container for linting OpenAPI specification files. Provides [IBM's
 OpenAPI validator](https://github.com/IBM/openapi-validator), plus a
@@ -15,7 +15,7 @@ requirements.
   $ docker run \
   >    -v "$PWD":/usr/app \
   >    -w /usr/app \
-  >    docker.pkg.github.com/lucidhq/openapi-validator/openapi-validator -s openapi.yaml
+  >    docker.pkg.github.com/lucidhq/openapi-validator/lucid-openapi-validator -s openapi.yaml
   ```
 
 * Validator will use the `config.json` file included in this repository as its
