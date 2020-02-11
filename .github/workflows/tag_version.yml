@@ -1,8 +1,8 @@
 name: Create tag version
 
-# Lucid openapi validator version is synced with the version of the IBM openapi
-# validator that it wraps. Therefore the version can be sniffed from the
-# dockerfile and used to create a tag when master is pushed.
+# Lucid OpenAPI validator version is synced with the version of the IBM OpenAPI
+# validator it wraps. Therefore the version can be sniffed from the Dockerfile
+# and used to create a tag when master is pushed.
 
 on:
   push:
